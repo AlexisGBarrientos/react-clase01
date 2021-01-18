@@ -8,7 +8,7 @@ const Header = () => {
                 <h1>Bienvenido</h1>
             </Col>
             <Col md={4}>
-                <h2>xD</h2>
+                <h2>Test</h2>
             </Col>
         </Row>
     );
