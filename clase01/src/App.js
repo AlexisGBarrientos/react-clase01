@@ -1,15 +1,15 @@
 import Header from "./Components/header";
+import Main from "./Components/main";
 import Footer from "./Components/footer";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    
-    <div>
-    <Header/>
-      <h1>Bienvenidos a la Clase 01 de React</h1>
-    <Footer/>
-    </div>
-    
+    <Container fluid>
+      <Header/>
+      <Main/>
+      <Footer/>
+    </Container>
   );
 }
 

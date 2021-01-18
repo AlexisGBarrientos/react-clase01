@@ -1,6 +1,16 @@
+import "./header.css";
+import { Row, Col } from "react-bootstrap";
+
 const Header = () => {
     return (
-        <h1>Encabezado</h1>
+        <Row className="justify-content-between">
+            <Col md={4}>
+                <h1>Bienvenido</h1>
+            </Col>
+            <Col md={4}>
+                <h2>xD</h2>
+            </Col>
+        </Row>
     );
 };
 
