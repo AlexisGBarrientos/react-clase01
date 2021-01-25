@@ -7,11 +7,11 @@ const Register = () => {
         name: "",
         email: ""
     }
-    const [user,setUser] = useState(initialState);
+    const [user,setUser] = useState(initialState); // useState vector de dos posiciones, el get y el set respectivamente. Las setero con user y setUser del objeto vacio 
     const handleInput = (e) => {
         setUser({
             ...user,
-            [e.target.name] : [e.target.value]
+            [e.target.name] : [e.target.value] // Dentro de los objetos [] para variables xD
         });
     }
     const handleReset = () => {
