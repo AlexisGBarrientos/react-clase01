@@ -3,7 +3,7 @@ import { Card, Col, Button } from "react-bootstrap";
 const Character = ({ name, img, occupation}) => {
     return(
         <Col md={4} className="mt-3 mb-3">
-            <Card>
+            <Card border="dark" className="shadow">
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>

@@ -1,14 +1,20 @@
 import { Container, Row, Col} from "react-bootstrap";
-import Characters from "./Components/Characters"
+import Header from "./Components/Header";
+import Characters from "./Components/Characters";
+import "./App.css";
+
 function App() {
   return (
-    <Container>
-      <Row className="justify-content-center">
-        <Col md={8}>
-          <Characters/>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <Header/>
+      <Container>
+        <Row className="justify-content-center">
+          <Col md={8}>
+            <Characters/>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
