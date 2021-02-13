@@ -20,7 +20,7 @@ export const useFetch = (endpoint, initialState = []) => {
                 setFeching(false);
                 setData(initialState);
                 setError(true);
-            }
+            }  
         };
         useEffect(() => {
             fetchData();
