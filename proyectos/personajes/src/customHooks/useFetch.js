@@ -9,17 +9,17 @@ export const useFetch = (endpoint, initialState = []) => {
         const [error, setError] = useState(false); // cuando el componente dio error
         const fetchData = async() => {
             try {
+                setFeching(true);
                 const result = await fetch(`${BASE_URL}/${endpoint}`);
                 const data = await result.json();
                 setData(data);
-                console.log(data)
                 setFeching(false);
                 setError(false);
                 
             } catch (e) {
-                setError(true);
                 setFeching(false);
-                setData({});
+                setData(initialState);
+                setError(true);
             }
         };
         useEffect(() => {
