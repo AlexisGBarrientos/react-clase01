@@ -1,8 +1,25 @@
-import { Row, Col} from "react-bootstrap";
+import { useFetch, useState } from "./Components/CustomHooks/useFetch";
+import { Row } from "react-bootstrap";
+import Character from "./Character";
+import Loading from "./Components/Loading";
 
 const Characters = () => {
+    const [data, fetching] = useFetch("character");
+    const {info, results: characters} = data;
     return ( 
-        <h2>Personajes</h2>
+        <>
+            <Row className="">
+                { fetching 
+                ?
+                (<Loading/>) 
+                :
+                (characters.map( (character) => 
+                    <Character key={character.id} {...character} />
+                ))
+
+                }
+            </Row>
+        </>
     );
 }
  
