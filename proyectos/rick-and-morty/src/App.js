@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Search from "./Components/Search";
 import Characters from "./Components/Characters";
 import Footer from "./Components/Footer";
+import "./App.css"
 
  
 function App() {

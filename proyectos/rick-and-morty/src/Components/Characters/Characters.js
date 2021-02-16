@@ -1,22 +1,21 @@
-import { useFetch, useState } from "./Components/CustomHooks/useFetch";
+import { useFetch, useState } from "./../../CustomHooks/useFetch";
 import { Row } from "react-bootstrap";
 import Character from "./Character";
-import Loading from "./Components/Loading";
+import Loading from "./../Loading";
 
 const Characters = () => {
     const [data, fetching] = useFetch("character");
     const {info, results: characters} = data;
     return ( 
         <>
-            <Row className="">
+            <Row className="justify-content-center">
                 { fetching 
                 ?
                 (<Loading/>) 
                 :
-                (characters.map( (character) => 
+                (characters.map( (character) => ( 
                     <Character key={character.id} {...character} />
-                ))
-
+                )))
                 }
             </Row>
         </>

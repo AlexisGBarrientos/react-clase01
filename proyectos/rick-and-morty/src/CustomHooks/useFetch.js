@@ -9,7 +9,7 @@ export const useFetch  = (endpoint,initialState = []) => {
     const fetchData = async() => {
         try {
             setFeching(true);
-            const result = await fetch(`${environment.BASE_URL}/${enpoint}`);
+            const result = await fetch(`${environment.BASE_URL}/${endpoint}`);
             const data = await result.json();
             console.log(data);
             setData(data);
